@@ -1,4 +1,7 @@
 <article>
   <h1><%= @article.title %></h1>
   <%= @article.body %>
+  <% @article.comments.each do |comment| %>
+  <%= comment.body %>
+  <% end %>
 </article>
