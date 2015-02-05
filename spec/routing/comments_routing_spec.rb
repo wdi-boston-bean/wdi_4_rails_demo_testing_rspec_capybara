@@ -15,5 +15,6 @@ RSpec.describe 'routes articles/1/comments to route to comment controller' do
 
 end
 
+# get '/articles/:id/comments', to: 'articles#show'
 #can hard code ids in spec bc it is testing the parsing and routing of the string passed
 
