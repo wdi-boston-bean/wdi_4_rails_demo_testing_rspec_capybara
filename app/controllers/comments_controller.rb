@@ -5,15 +5,11 @@ class CommentsController < ApplicationController
   end
 
   def new
-    @article = Article.find(params[:id])
-    @comment = @article.comments(comment_params)
-    
+    @comment = Comment.new
   end
 
   private
     def comment_params
       params.require(:comments).permit(:body)
     end
-
-
 end

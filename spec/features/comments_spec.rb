@@ -7,7 +7,7 @@ RSpec.feature 'Manages Comments' do
     @article.comments.create!(body: "blue")
     @article.comments.create!(body: "blood")
 
-    visit 'article/1/comments'
+    visit 'articles/1/comments'
 
     expect(page).to have_content 'Comments'
     expect(page).to have_selector 'comment', count: 3
