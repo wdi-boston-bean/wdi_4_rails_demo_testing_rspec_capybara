@@ -38,9 +38,13 @@ RSpec.describe CommentsController do
     it 'renders the new template' do
       get :new, article_id: '1'
       expect(response).to render_template('new')
-      # 'GET articles/:article_id/comments/new'
     end
 
+    it 'assigns @comment' do
+      get :new, article_id: '1'
+      expect(assigns(:comment)).to be_a_new Comment
+    end
+    
   end
 
 end
